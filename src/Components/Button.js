@@ -1,7 +1,7 @@
-export default function Input () {
+export default function Input ({type, title}) {
     return (
-        <button>
-            
+        <button type={type}>
+            {title}
         </button>
     )
 }

@@ -1,5 +1,7 @@
-export default function Input () {
+export default function Input ({type, placeholder}) {
     return (
-        <input />
+        <>
+        <input type = {type} placeholder = {placeholder} id = {type}/>
+        </>
     )
 }

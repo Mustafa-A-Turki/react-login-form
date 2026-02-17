@@ -1,7 +1,5 @@
-export default function Input () {
+export default function SocialButton ({link, icon, title}) {
     return (
-        <button>
-            
-        </button>
+        <a href="">{icon}{title}</a>
     )
 }
