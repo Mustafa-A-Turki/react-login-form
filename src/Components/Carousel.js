@@ -33,18 +33,6 @@ export default function Carousel() {
     setIndex((prev) => prev + 1);
   };
 
-  const prevSlide = () => {
-    if (index === 0) {
-      setEnableTransition(false);
-      setIndex(total);
-      setTimeout(() => {
-        setEnableTransition(true);
-        setIndex(total - 1);
-      }, 20);
-    } else {
-      setIndex((prev) => prev - 1);
-    }
-  };
 
   // لما نوصل للـ clone
   useEffect(() => {
