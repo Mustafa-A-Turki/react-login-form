@@ -1,6 +1,6 @@
-import img1 from '../assets/Gemini_Generated_Image_y4iib6y4iib6y4ii.png'
-import img2 from '../assets/Gemini_Generated_Image_y4iib6y4iib6y4ii.png'
-import img3 from '../assets/Gemini_Generated_Image_y4iib6y4iib6y4ii.png'
+import img1 from '../../assets/Gemini_Generated_Image_y4iib6y4iib6y4ii.png'
+import img2 from '../../assets/Gemini_Generated_Image_y4iib6y4iib6y4ii.png'
+import img3 from '../../assets/Gemini_Generated_Image_y4iib6y4iib6y4ii.png'
 
 
 import { useEffect, useRef, useState } from "react";
