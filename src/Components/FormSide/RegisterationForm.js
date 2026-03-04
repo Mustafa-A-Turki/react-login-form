@@ -16,17 +16,24 @@ export default function RegisterationForm() {
     terms: false,
   });
 
+  const [error, setError] = useState({success:"", field:"", message:""});
+
   return (
     <form
       onSubmit={(e) => {
-        if (handleSubmit(inputValue).message !== "Success!") {
+        let errorMessage = handleSubmit(inputValue);
+        if (errorMessage.message !== "Success!") {
+          setError(errorMessage);
+          setTimeout(()=>{
+            document.querySelector(`input[name="${errorMessage.field}"]`)?.focus();
+          })
           e.preventDefault();
         }
       }}
     >
       <HeaderSection />
-      <InputSection handleChange={setInputValue} value={inputValue} />
-      <TermsSection handleChange={setInputValue} value={inputValue} />
+      <InputSection handleChange={setInputValue} value={inputValue} error = {error}/>
+      <TermsSection handleChange={setInputValue} value={inputValue} error = {error}/>
       <SubmitSection />
       <DividerSection />
       <SocialButtonsSection />

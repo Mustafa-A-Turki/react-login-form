@@ -4,17 +4,22 @@ export default function Input({
   value,
   setValue,
   name,
+  error,
 }) {
   return (
     <>
       <input
+        name={name}
         type={type}
         placeholder={placeholder}
-        id={type}
+        id={name}
+        style={{
+          outline: name === error ? "1px solid red" : "",
+        }}
         value={value}
         onChange={(e) => {
-          setValue((prev)=>{
-            return {...prev, [name] : e.target.value}
+          setValue((prev) => {
+            return { ...prev, [name]: e.target.value };
           });
         }}
       />
